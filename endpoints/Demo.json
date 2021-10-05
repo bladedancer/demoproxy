@@ -1,0 +1,45 @@
+{
+	"x-enabled": {
+		"enabled": true
+	},
+	"swagger": "2.0",
+	"info": {
+		"description": "Greeting functions",
+		"version": "1.0.0",
+		"title": "Greeting API"
+	},
+	"paths": {
+		"/demo": {
+			"get": {
+				"x-flow": "DemoFlow",
+				"description": "",
+				"operationId": "Demo",
+				"parameters": [
+					{
+						"name": "target",
+						"type": "string",
+						"in": "query"
+					}
+				],
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "demo response",
+						"schema": {}
+					},
+					"400": {
+						"description": "bad request",
+						"schema": {}
+					}
+				},
+				"summary": "Demo an egress call.",
+				"tags": [
+					"egress",
+					"demo"
+				]
+			}
+		}
+	}
+}
